@@ -1,0 +1,171 @@
+body {
+    background-image: url('/static//tra.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+
+h1{
+    padding-top: 200px;
+    padding-bottom: 0;
+    font-size: 55px;
+    color:white;
+    font-family:CoyrierNew;
+    text-align:center;
+    padding-top: 100px;
+    padding-bottom:0;
+    font-size: 55px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color:white ;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+
+}
+.menu ul a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 12px;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+.menu ul a:hover {
+  font-weight: bold;
+  border-bottom: 4px solid black;
+  transition: all 0.4s ease-in;
+}
+
+
+.input-group{
+    width: 200%;
+    max-width: 350px;
+    border-radius: 30px;
+    background: #e3f3fc;
+    margin: auto;
+    padding: 2px;
+}
+
+.input-group-text{
+    width: 100px;
+    background-image: linear-gradient(#00ff7e,#1f3d90);
+    align:right ;
+    border: 0 ;
+    color: #e3f3fc;
+    padding: 0 25px;
+    border-radius: 30px;
+    box-shadow: none;
+
+}
+
+
+
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+   border-radius: 50%;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+
+
+.form-control{
+    width: 90% ;
+    border: 0 !important;
+    background: #e3f3fc;
+    border-radius: 30px !important;
+    margin: 2px;
+    box-shadow: none !important;
+}
+
+
+
+
+
+
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+
+  border-radius: 25px;
+}
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 25px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4070f4;
+}
+.container {
+
+  display: flex;
+  gap: 12px;
+  max-width:1300px;
+  width: 900%;
+  border-radius: 12px;
+  padding: 30px;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  scroll-padding: 30px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+.container .card {
+  display: flex;
+  flex: 0 0 30%;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border-radius: 12px;
+  scroll-snap-align: start;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    width: 21.25em;
+  border-radius: 50px;
+  padding: 2px;
+  margin: 15px;
+  transition: 0.7s ease;
+  box-sizing: border-box;
+}
+.card .image {
+ align-items: center;
+  height: 200px;
+  width: 200px;
+  padding: 2px;
+  border-radius: 50%;
+}
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 70%;
+  border: 10px solid #fff;
+}
+
+

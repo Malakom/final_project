@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alter YOUR ADVENTURES</title>
+    <link rel="stylesheet"  href={{url_for('static',filename='style.css')}}>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="logo">
+      <h1><em><a href="/"><img src="/static//aiir.jpg", width="90"height="90"></a></em></h1>
+</div>
+
+    <form method="post" enctype="multipart/form-data">
+        <dl>
+            <label> Alter YOUR ADVENTURES</label>
+            <p>
+                <input type="file" name="filename" required>
+            </p>
+        </dl>
+        <label>Name of country</label>
+        <input type="text" name="country_name" ><br><br>
+        <label> Capital Name</label>
+        <input type="text" name="capital_name" ><br><br>
+         <label> Official language</label>
+        <input type="text" name="official_language" ><br><br>
+        <label >Country currency</label>
+        <input type="text" name="country_currency" required><br><br>
+        <label > Video</label>
+        <input type="text" name="video"><br><br>
+        <li><label> Book now</label></li>
+        <input type="text" name="book"><br><br>
+
+        <button type="submit">Update</button>
+
+    </form>
+<b><hr></b>
+    <a href="/"><i class="w3-xxlarge"><i class="fa fa-home" style="color:blue;"></i></i></a>
+
+</body>
+</html>

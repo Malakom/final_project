@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+    <title>add hotels</title>
+    <link rel="stylesheet"  href={{url_for('static',filename='mystyle.css')}}>
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' type='text/css' media='screen' href=''>
+  <script src="https://kit.fontawesome.com/44f557ccce.js"></script>
+
+</head>
+<body>
+
+<div class="logo">
+      <h1><em><a href="/"><img src="/static//aiir.jpg", width="90"height="90"></a></em></h1>
+</div>
+
+
+
+
+<ul>
+    <form action="/add" method="post" enctype="multipart/form-data">
+
+            <label><h2> Add  Hotels:</h2></label>
+
+            <li><p>
+                <label>Chose picture </label>
+                <input type="file" name="filehotel" required>
+            </p></li><br><br>
+
+
+        <li><label>Name of Hotel</label></li>
+        <input type="text" name="hotel_name" required><br><br>
+        <form method="post" action="/add_hotels">
+        <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5" />
+                <label class="star" for="star5" title="Awesome" aria-hidden="true"></label>
+                <input type="radio" id="star4" name="rating" value="4" />
+                <label class="star" for="star4" title="Great" aria-hidden="true"></label>
+                <input type="radio" id="star3" name="rating" value="3" />
+                <label class="star" for="star3" title="Very good" aria-hidden="true"></label>
+                <input type="radio" id="star2" name="rating" value="2" />
+                <label class="star" for="star2" title="Good" aria-hidden="true"></label>
+                <input type="radio" id="star1" name="rating" value="1" />
+                <label class="star" for="star1" title="Bad" aria-hidden="true"></label>
+        </div><br><br><br><br><br>
+
+        <button type="submit">Add</button>
+
+    </form>
+ </ul> <br><br>
+<b><hr></b>
+    <a href="/"><i class="w3-xxlarge"><i class="fa fa-home" style="color:blue;"></i></i></a>
+</body>
+</html>

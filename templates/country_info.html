@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>country</title>
+    <link rel="stylesheet"  href={{url_for('static',filename='mystyle.css')}}>
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' type='text/css' media='screen' href=''>
+  <script src="https://kit.fontawesome.com/44f557ccce.js"></script>
+</head>
+<body>
+
+
+ <div class="container">
+
+      <div class="navbar">
+    <div class="logo">
+      <h1><em><a href="/"><img src="/static//aiir.jpg",width="80"height="80"></a></em></h1>
+    </div>
+    <div class="menu">
+        <ul>
+        <a href="/">Home</a>
+        <a href="/about_us">ABOUT US</a>
+            <a href="/contact">Contact</a>
+            <a href="/delete/{{country_specific.id}}"><i class="fa fa-trash" id="delete"></i></a>
+        <a  href="/alter_country/{{country_specific.id}}"><i class="fa fa-refresh" id="alter"></i></a>
+
+      </ul>
+    </div>
+    </div>
+
+
+<section class="header">
+      <h1 style="text-align:center;font-style: italic;">Hello In {{country_specific.country_name}}</h1><br><br>
+</section>
+ </div>
+
+  <ol>
+     <br><h3> Capital Name :{{country_specific.capital_name}}<br></h3>
+    <br><h3>Official Language :{{country_specific.official_language}}<br></h3>
+      <br><h3>Country currency :{{country_specific.country_currency}}<br></h3>
+
+      <br><br><br><hr style="margin: 0 auto;width: 20%"><br><br><br>
+
+      <p><h3 style="font-family:CoyrierNew;">Best 10 Places in {{country_specific.country_name}}:<br><br><p>
+ <iframe id="youtube" width="420" height="315"
+src="{{country_specific.video}}">
+</iframe>
+</p><br></h3>
+      <br><br></p><hr>
+ </ol>
+ <h1>Book Now</h1>
+
+ <iframe id="booking" width="100%" height="400"
+ src="{{country_specific.book}}">
+</iframe>
+
+
+<form method="post" action="/add_review">
+    <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5" />
+                  <label class="star" for="star5" title="Awesome" aria-hidden="true"></label>
+                  <input type="radio" id="star4" name="rating" value="4" />
+                  <label class="star" for="star4" title="Great" aria-hidden="true"></label>
+                  <input type="radio" id="star3" name="rating" value="3" />
+                  <label class="star" for="star3" title="Very good" aria-hidden="true"></label>
+                  <input type="radio" id="star2" name="rating" value="2" />
+                  <label class="star" for="star2" title="Good" aria-hidden="true"></label>
+                  <input type="radio" id="star1" name="rating" value="1" />
+                  <label class="star" for="star1" title="Bad" aria-hidden="true"></label>
+            </div><br><br><br><br><br>
+    <h4><label style="font-family:CoyrierNew;">Name</label>
+    <input type="text" name="name" required></h4><br>
+     <h4><label style="font-family:CoyrierNew;">Review</label>
+    <textarea type="text" name="review_text" required></textarea>
+    <input type="hidden" name="country_id" value="{{country_specific.id}}">
+    <button id="review_add" type="submit">Add</button></h4>
+</form>
+<br><br>
+    <div class="reviews">
+        {%for review in reviews_specific%}
+        <div class="review">
+                <br><br>
+
+            <div class="body-review">
+                <img src="/static/img_avatar.png" width="250px">
+                <div class="name-review">
+                     <h5>{{review.name}}</h5>
+                    <div class="rating-review">
+                     {% for rate in range (review.rating)%}
+    <strong>⭐</strong>
+        {%endfor%}
+                    </div>
+                </div>
+                <div class="desc-review">
+                <p>{{review.review_text}}</p>
+                </div>
+            </div>
+        </div>
+          {%endfor%}
+    </div>
+
+<hr>
+
+
+
+<br>
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Add NEW ADVENTURES</title>
+        <link rel="stylesheet"  href={{url_for('static',filename='style.css')}}>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="logo">
+      <h1><em><a href="/"><img src="/static//aiir.jpg", width="90"height="90"></a></em></h1>
+</div>
+
+
+
+
+<ul>
+    <form action="/add" method="post" enctype="multipart/form-data">
+
+            <label><h2> Add your new country:</h2></label>
+
+            <li><p>
+                <label>Chose picture </label>
+                <input type="file" name="filename" required>
+            </p></li>
+
+
+        <li><label>Name of country</label></li>
+        <input type="text" name="country_name" required><br><br>
+        <li><label> Capital Name</label></li>
+        <input type="text" name="capital_name" required><br><br>
+         <li><label> Official language</label></li>
+        <input type="text" name="official_language" required><br><br>
+         <li><label> Country currency</label></li>
+        <input type="text" name="country_currency" required><br><br>
+         <li><label> Video</label></li>
+        <input type="text" name="video"><br><br>
+        <li><label> Book now</label></li>
+        <input type="text" name="book"><br><br>
+
+
+        <button type="submit">Add</button>
+
+    </form></ul><br><br>
+<b><hr></b>
+    <a href="/"><i class="w3-xxlarge"><i class="fa fa-home" style="color:blue;"></i></i></a>
+
+</body>
+</html>

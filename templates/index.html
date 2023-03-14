@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title > ADVENTURES </title>
+    <link rel="stylesheet"  href={{url_for('static',filename='mystylei.css')}}>
+     <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body style="text-align:center">
+<div class="menu">
+        <ul>
+            <a href="{{url_for('open_login')}}">log-in</a>
+        <a href="/add_data">ADD</a>
+        <a href="/about_us">ABOUT US</a>
+            <a href="/contact">Contact</a>
+
+
+      </ul>
+    </div>
+
+<div class="header">
+<h1>Welcome</h1>
+<p>OUR  TRAVEL& ADVENTURES <br>COME WITH us !</p><br><br>
+</div>
+
+<div class="input-group">
+    <a align="center">
+    <form method="post" action="{{url_for('search')}}">
+    <input type="text" class="form-control" autofocus="autofocus" name="search_string">
+    <div class="input-group-append">
+    <button type="submit" formaction="/search" value='search' class="input-group-text btn" >Search</button>
+    </div>
+     </form></a>
+</div>
+
+<br><br>
+<br><br>
+
+<section class="container">
+
+              {% for country in countries_data%}
+      <div class="card">
+
+        <div class="image">
+
+        <a href="{{url_for('country_info', country_id=country.id)}}"><img src="{{ url_for('display_image' , filename=country.filename)}}", width="250"height="250",
+                                                                style="text-align:center;border: 2px solid green;" alt="good">
+</a>
+
+ </div>
+          <div class="card-body">
+               <h4 class="card-title">{{country.country_name}}</h4>
+            </div>
+      </div>
+      {% endfor %}
+  </section>
+
+
+</body>
+</html>

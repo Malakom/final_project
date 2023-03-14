@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<title>login</title>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>contact</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="stylesheet"  href={{url_for('static',filename='stylestyle.css')}}>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+
+</head>
+<body >
+<div class="right-side">
+        <div class="topic-text"><h1 style="color:#003399;">login</h1></div>
+      <form action=http://localhost:5000/login" method="post" enctype="multipart/form-data">
+        <div class="input-box">
+          <input type="text" placeholder="Name" name="name" required>
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="password" name="password" required>
+        </div>
+
+        <div class="button">
+                <p><input type="submit" value="Log-in"> <a href="{{url_for('open_register')}}"> New Admin</a></p>
+
+
+        </div>
+      </form>
+
+
+
+{% if first_time == false %}
+<h3 style="color:red">Wrong user name or password</h3>
+{%endif%}
+
+</body>
+</html>
